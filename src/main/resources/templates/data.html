@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Results Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" th:href="@{/app.css}">
+    </head>
+    <body>
+        <h1>Form Submission Result</h1>
+        <p>
+            <strong>Name: </strong><span th:text="${name}"></span>
+        </p>
+
+        <p>
+            <strong>Email: </strong><span th:text="${email}"></span>
+        </p>
+    </body>
+</html>

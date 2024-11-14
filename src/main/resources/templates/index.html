@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title th:text="#{page.title}"></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" th:href="@{/app.css}">
+    </head>
+    <body>
+        <header>
+            <img th:class="logo" src="/pictures/logo.png" alt="Logo image">
+        </header>
+
+        <section>
+            <h1>TT</h1>
+            <h2>DD</h2>
+            <h2 th:text="#{page.subtitle}"></h2>
+            <div th:if="${showDetails}">
+                <div th:replace="~{fragments/details.html :: content('en')}"/>
+            </div>
+
+            <img th:class="cover" src="/pictures/image.png" alt="Academy">
+        </section>
+
+        <footer>
+            <p th:class="light-text">PLEASE WORK</p>
+        </footer>
+        
+    </body>
+</html>

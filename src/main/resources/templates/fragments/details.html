@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" th:href="@{/app.css}">
+    </head>
+    <body>
+        
+        <div th:fragment="content (lang)">
+            <h3 th:if="${lang == 'en_us'}">This is in English US</h3>
+            <h3 th:if="${lang == 'en_ca'}">This is in English CA</h3>
+            <h3 th:if="${lang == 'en'}">This is in English</h3>
+            <h3 th:if="${lang == 'es'}">Spanish</h3>
+            <h3 th:if="${lang == 'fr'}">C'est Francais</h3>
+            <ul th:each="item: ${features}">
+                <li th:text="${item}"/>
+            </ul>
+
+
+        </div>
+    </body>
+</html>
